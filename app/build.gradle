@@ -1,0 +1,61 @@
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.amap.zachary.gradle'
+repositories {
+    jcenter()
+
+}
+buildscript{
+    repositories{
+        maven{
+            url uri('../repo')
+        }
+    }
+    dependencies{
+        classpath 'com.amap.zachary.gradle:customplugin4cp:1.1.0'
+    }
+
+}
+custom_setting{
+    debug=true
+    settingDependsonTask='preDebugBuild'
+    resettingDependsonTask='test'
+    replace 'src/main/AndroidManifest.xml:17:27'
+    replace 'src/main/AndroidManifest.xml:com.amap.map3d.demo:com.test.map3d.demo'
+    setting 'com/amap/map3d/demo/MainActivity.java:s:127.0.0.10'
+    setting 'com/amap/map3d/demo/MainActivity.java:i:127'
+}
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.amap.api:map3d-native:3.3.2+'
+    compile 'com.amap.api:map3d:3.3.2+'
+    compile 'com.amap.api:location:2.6.0+'
+    compile 'com.amap.api:search:3.3.0+'
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+

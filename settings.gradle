@@ -1,0 +1,2 @@
+include 'customplugin4cp'
+include ':app', ':newNaviDemo'

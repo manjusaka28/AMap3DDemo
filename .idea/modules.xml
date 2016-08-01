@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AMap3DDemo.iml" filepath="$PROJECT_DIR$/AMap3DDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customplugin4cp/customplugin4cp.iml" filepath="$PROJECT_DIR$/customplugin4cp/customplugin4cp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newNaviDemo/newNaviDemo.iml" filepath="$PROJECT_DIR$/newNaviDemo/newNaviDemo.iml" />
+    </modules>
+  </component>
+</project>

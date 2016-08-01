@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="map3d-native-3.3.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amap.api/map3d-native/3.3.2/74cfb02d7b9ef868aacad5b85ff61c2103eec2e/map3d-native-3.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amap.api/map3d-native/3.3.2/d95223420f98e822ceb2318ee0f77c315d416a95/map3d-native-3.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
